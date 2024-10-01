@@ -1,7 +1,16 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 function App() {
+  const [tytul,setTytul] = useState("");
+  const [rodzaj, setrodzaj] =useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(`Tytuł: ${tytul}, Rodzaj: ${rodzaj}`);
+  }; 
   return (
     <div className="App">
       <form>
